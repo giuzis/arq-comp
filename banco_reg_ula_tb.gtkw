@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Tue Oct  2 05:03:12 2018
+[*]
+[dumpfile] "/home/giuliana/Documents/arq-comp/arq-comp/banco_reg_ula_tb.ghw"
+[dumpfile_mtime] "Tue Oct  2 05:02:47 2018"
+[dumpfile_size] 4624
+[savefile] "/home/giuliana/Documents/arq-comp/arq-comp/banco_reg_ula_tb.gtkw"
+[timestart] 0
+[size] 1146 600
+[pos] -1 -1
+*-27.804808 166000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.banco_reg_ula_tb.
+[sst_width] 43
+[signals_width] 216
+[sst_expanded] 0
+[sst_vpaned_height] 210
+@28
+top.banco_reg_ula_tb.clk
+top.banco_reg_ula_tb.rst
+top.banco_reg_ula_tb.sel_mux
+#{top.banco_reg_ula_tb.sel_ula[1:0]} top.banco_reg_ula_tb.sel_ula[1] top.banco_reg_ula_tb.sel_ula[0]
+top.banco_reg_ula_tb.en_write
+@22
+#{top.banco_reg_ula_tb.immediate[15:0]} top.banco_reg_ula_tb.immediate[15] top.banco_reg_ula_tb.immediate[14] top.banco_reg_ula_tb.immediate[13] top.banco_reg_ula_tb.immediate[12] top.banco_reg_ula_tb.immediate[11] top.banco_reg_ula_tb.immediate[10] top.banco_reg_ula_tb.immediate[9] top.banco_reg_ula_tb.immediate[8] top.banco_reg_ula_tb.immediate[7] top.banco_reg_ula_tb.immediate[6] top.banco_reg_ula_tb.immediate[5] top.banco_reg_ula_tb.immediate[4] top.banco_reg_ula_tb.immediate[3] top.banco_reg_ula_tb.immediate[2] top.banco_reg_ula_tb.immediate[1] top.banco_reg_ula_tb.immediate[0]
+@29
+#{top.banco_reg_ula_tb.write_reg[2:0]} top.banco_reg_ula_tb.write_reg[2] top.banco_reg_ula_tb.write_reg[1] top.banco_reg_ula_tb.write_reg[0]
+@28
+#{top.banco_reg_ula_tb.read_reg_1[2:0]} top.banco_reg_ula_tb.read_reg_1[2] top.banco_reg_ula_tb.read_reg_1[1] top.banco_reg_ula_tb.read_reg_1[0]
+#{top.banco_reg_ula_tb.read_reg_2[2:0]} top.banco_reg_ula_tb.read_reg_2[2] top.banco_reg_ula_tb.read_reg_2[1] top.banco_reg_ula_tb.read_reg_2[0]
+top.banco_reg_ula_tb.saida_maior[0]
+@22
+#{top.banco_reg_ula_tb.saida_ula[15:0]} top.banco_reg_ula_tb.saida_ula[15] top.banco_reg_ula_tb.saida_ula[14] top.banco_reg_ula_tb.saida_ula[13] top.banco_reg_ula_tb.saida_ula[12] top.banco_reg_ula_tb.saida_ula[11] top.banco_reg_ula_tb.saida_ula[10] top.banco_reg_ula_tb.saida_ula[9] top.banco_reg_ula_tb.saida_ula[8] top.banco_reg_ula_tb.saida_ula[7] top.banco_reg_ula_tb.saida_ula[6] top.banco_reg_ula_tb.saida_ula[5] top.banco_reg_ula_tb.saida_ula[4] top.banco_reg_ula_tb.saida_ula[3] top.banco_reg_ula_tb.saida_ula[2] top.banco_reg_ula_tb.saida_ula[1] top.banco_reg_ula_tb.saida_ula[0]
+[pattern_trace] 1
+[pattern_trace] 0

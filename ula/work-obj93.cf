@@ -1,7 +1,0 @@
-v 3
-file . "ula_tb.vhdl" "20180919231950.000" "20180920114002.466":
-  entity ula_tb at 1( 0) + 0 on 19;
-  architecture a_ula_tb of ula_tb at 8( 100) + 0 on 20;
-file . "ula.vhdl" "20180919231943.000" "20180920113946.113":
-  entity ula at 1( 0) + 0 on 17;
-  architecture a_ula of ula at 14( 328) + 0 on 18;
