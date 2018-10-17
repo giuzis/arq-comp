@@ -14,17 +14,17 @@ architecture a_rom of rom is
 	type mem is array (0 to 127) of unsigned(14 downto 0);
 	constant conteudo_rom : mem := (
 		-- caso endereco => conteudo
-		0 => "000000000000010",
-		1 => "100000000000000",
-		2 => "000000000000000",
-		3 => "000000000000000",
-		4 => "100000000000000",
-		5 => "000000000000010",
-		6 => "111100000000011",
-		7 => "000000000000010",
-		8 => "000000000000010",
-		9 => "000000000000000",
-		10 => "000000000000000",
+		0 => "100000000000000", -- erro
+		1 => "111100000000010", -- jump para o endereco 2 (inicio loop)
+		2 => "111100000000100", -- jump para o endereco 4
+		3 => "000000000000000", -- nop
+		4 => "111100000001000", -- jump para o endereco 8
+		5 => "111100000001010", -- jump para o endereço 10
+		6 => "000000000000000", -- nop
+		7 => "111100000000001", -- jump para o endereco 1 (retoma loop)
+		8 => "111100000000101", -- jump para o endereço 5
+		9 => "000000000000000", -- nop
+		10 => "111100000000110", -- jump para o endereco 6
 		-- abaixo: casos omissos => (zero em todos os bits)
 		others => (others=>'0')
 	);
