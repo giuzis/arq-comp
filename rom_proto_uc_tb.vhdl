@@ -2,25 +2,25 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity proto_uc_tb is
+entity rom_proto_uc_tb is
 end entity;
 
-architecture a_proto_uc_tb of proto_uc_tb is
-	component proto_uc is
+architecture a_rom_proto_uc_tb of rom_proto_uc_tb is
+	component rom_proto_uc is
 		port (
 			clk : in std_logic;
 			rst : in std_logic;
 			wr_en : in std_logic;
-			data_out : out unsigned(6 downto 0)
+			dado : out unsigned(14 downto 0)
 		);
-	end component proto_uc;
+	end component rom_proto_uc;
 
 	signal clk, rst, wr_en: std_logic;
-	signal data_out: unsigned(6 downto 0);
+	signal dado: unsigned(14 downto 0);
 
 	begin
 
-	 uut: proto_uc port map(clk => clk, rst => rst, wr_en => wr_en, data_out => data_out);
+	 uut: rom_proto_uc port map(clk => clk, rst => rst, wr_en => wr_en, dado => dado);
 
 	 process -- sinal de clock
 	 begin
@@ -40,4 +40,4 @@ architecture a_proto_uc_tb of proto_uc_tb is
 		 wait;
 	 end process;
 
-end architecture a_proto_uc_tb;
+end architecture a_rom_proto_uc_tb;

@@ -7,7 +7,7 @@ entity proto_uc is
 			clk : in std_logic;
 			rst : in std_logic;
 			wr_en : in std_logic;
-			data_out : out unsigned(14 downto 0)
+			data_out : out unsigned(6 downto 0)
 		);
 end entity;
 
@@ -17,12 +17,12 @@ architecture a_proto_uc of proto_uc is
 			clk : in std_logic;
 			rst : in std_logic;
 			wr_en : in std_logic;
-			data_in : in unsigned(14 downto 0);
-			data_out : out unsigned(14 downto 0)
+			data_in : in unsigned(6 downto 0);
+			data_out : out unsigned(6 downto 0)
 	 	);
 	end component pc;
 	
-	signal data_in, data_out_s : unsigned(14 downto 0);
+	signal data_in, data_out_s : unsigned(6 downto 0);
 
 begin
 
@@ -34,7 +34,7 @@ begin
 						wr_en	 => wr_en
 						);
 
-	data_in <= data_out_s + "000000000000001";
+	data_in <= data_out_s + "0000001";
 	data_out <= data_out_s;
 
 	

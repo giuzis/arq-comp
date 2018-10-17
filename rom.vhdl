@@ -8,10 +8,10 @@ entity rom is
 		endereco : in unsigned(6 downto 0);
 		dado : out unsigned(14 downto 0)
 	);
-end entity;
+end entity rom;
 
 architecture a_rom of rom is
-	type mem is array (0 to 127) of unsigned(11 downto 0);
+	type mem is array (0 to 127) of unsigned(14 downto 0);
 	constant conteudo_rom : mem := (
 		-- caso endereco => conteudo
 		0 => "000000000000010",

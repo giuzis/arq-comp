@@ -16,7 +16,7 @@ architecture a_fsm_tb of fsm_tb is
 	signal clk, rst, estado: std_logic;
 	--signal estado: unsigned(15 downto 0);
 	begin
-	 uut: fsm port map(clk=>clk,rst=>rst,estado=>estado);
+	 uut: fsm port map(clk => clk, rst => rst, estado => estado);
 	 process -- sinal de clock
 	 begin
 		 clk <= '0';

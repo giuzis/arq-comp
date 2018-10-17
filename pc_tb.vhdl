@@ -11,12 +11,12 @@ architecture a_pc_tb of pc_tb is
 			 clk : in std_logic;
 			 rst : in std_logic;
 			 wr_en : in std_logic;
-			 data_in : in unsigned(14 downto 0);
-			 data_out : out unsigned(14 downto 0)
+			 data_in : in unsigned(6 downto 0);
+			 data_out : out unsigned(6 downto 0)
 		);
 	end component;
 	signal clk, rst, wr_en: std_logic;
-	signal data_in,data_out: unsigned(14 downto 0);
+	signal data_in,data_out: unsigned(6 downto 0);
 	begin
 	 uut: pc port map(clk=>clk,rst=>rst,wr_en=>wr_en,data_in=>data_in,
 	 data_out=>data_out);
