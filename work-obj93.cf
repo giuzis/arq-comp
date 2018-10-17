@@ -1,28 +1,40 @@
 v 4
-file . "reg16bits_tb.vhdl" "b352f5c574d7af4318ea6492385161adf6c3eddb" "20181002005024.478":
-  entity reg16bits_tb at 1( 0) + 0 on 75;
-  architecture a_reg16bits_tb of reg16bits_tb at 9( 115) + 0 on 76;
-file . "banco_reg.vhdl" "ec653fbdf8972e1944a398dfe019dce8df219c88" "20181002045419.425":
-  entity banco_reg at 1( 0) + 0 on 101;
-  architecture a_banco_reg of banco_reg at 18( 596) + 0 on 102;
-file . "ula.vhdl" "3ba5527f85381e115f1c68e3b53923473f6d0a6a" "20181002045426.040":
-  entity ula at 1( 0) + 0 on 103;
-  architecture a_ula of ula at 14( 308) + 0 on 104;
-file . "ula_tb.vhdl" "500083f5350fff18f0650f9fffa2c77b67cb468b" "20180922215157.155":
-  entity ula_tb at 1( 0) + 0 on 15;
-  architecture a_ula_tb of ula_tb at 9( 152) + 0 on 16;
-file . "banco_reg_tb.vhdl" "9deb26ba0d10769676458fbc5a323cb170ce6ef9" "20181002005235.431":
-  entity banco_reg_tb at 1( 0) + 0 on 79;
-  architecture a_banco_reg_tb of banco_reg_tb at 8( 107) + 0 on 80;
-file . "reg16bits.vhdl" "cb39e213d8d231124c5c333dafb17ecff03eb96e" "20181002005024.472":
-  entity reg16bits at 1( 0) + 0 on 73;
-  architecture a_reg16bits of reg16bits at 16( 275) + 0 on 74;
-file . "banco_reg_ula_tb.vhdl" "8fb8984a8dfdeafe7149c3f4f8320c6ebae9423a" "20181002050246.499":
-  entity banco_reg_ula_tb at 1( 0) + 0 on 121;
-  architecture a_banco_reg_ula_tb of banco_reg_ula_tb at 8( 111) + 0 on 122;
-file . "banco_reg_ula.vhdl" "826688beb479a12da5ec0e17470d527401c2e41b" "20181002050244.781":
-  entity banco_reg_ula at 1( 0) + 0 on 119;
-  architecture a_banco_reg_ula of banco_reg_ula at 22( 715) + 0 on 120;
+file . "pc_tb.vhdl" "f15bad8c36137b73e7442cd8e49b1373c837df2c" "20181017010719.427":
+  entity pc_tb at 1( 0) + 0 on 159;
+  architecture a_pc_tb of pc_tb at 8( 99) + 0 on 160;
+file . "proto_uc_tb.vhdl" "138a374a46836f7f27fadb2fffa532b1aca44b37" "20181017011029.292":
+  entity proto_uc_tb at 1( 0) + 0 on 163;
+  architecture a_proto_uc_tb of proto_uc_tb at 8( 105) + 0 on 164;
+file . "proto_uc.vhdl" "3d3810e960889dc7a25e62c36548bea47a0b6a38" "20181017011029.284":
+  entity proto_uc at 1( 0) + 0 on 161;
+  architecture a_proto_uc of proto_uc at 14( 225) + 0 on 162;
 file . "mux2x1.vhdl" "0de37f0fd0a293714f83c6d1fdf141e4fbffc3b4" "20181002045432.623":
   entity mux2x1 at 1( 0) + 0 on 105;
   architecture a_mux2x1 of mux2x1 at 14( 273) + 0 on 106;
+file . "banco_reg_ula.vhdl" "826688beb479a12da5ec0e17470d527401c2e41b" "20181002050244.781":
+  entity banco_reg_ula at 1( 0) + 0 on 119;
+  architecture a_banco_reg_ula of banco_reg_ula at 22( 715) + 0 on 120;
+file . "banco_reg_ula_tb.vhdl" "8fb8984a8dfdeafe7149c3f4f8320c6ebae9423a" "20181002050246.499":
+  entity banco_reg_ula_tb at 1( 0) + 0 on 121;
+  architecture a_banco_reg_ula_tb of banco_reg_ula_tb at 8( 111) + 0 on 122;
+file . "reg16bits.vhdl" "cb39e213d8d231124c5c333dafb17ecff03eb96e" "20181002005024.472":
+  entity reg16bits at 1( 0) + 0 on 73;
+  architecture a_reg16bits of reg16bits at 16( 275) + 0 on 74;
+file . "banco_reg_tb.vhdl" "9deb26ba0d10769676458fbc5a323cb170ce6ef9" "20181002005235.431":
+  entity banco_reg_tb at 1( 0) + 0 on 79;
+  architecture a_banco_reg_tb of banco_reg_tb at 8( 107) + 0 on 80;
+file . "ula_tb.vhdl" "500083f5350fff18f0650f9fffa2c77b67cb468b" "20180922215157.155":
+  entity ula_tb at 1( 0) + 0 on 15;
+  architecture a_ula_tb of ula_tb at 9( 152) + 0 on 16;
+file . "ula.vhdl" "3ba5527f85381e115f1c68e3b53923473f6d0a6a" "20181002045426.040":
+  entity ula at 1( 0) + 0 on 103;
+  architecture a_ula of ula at 14( 308) + 0 on 104;
+file . "banco_reg.vhdl" "ec653fbdf8972e1944a398dfe019dce8df219c88" "20181002045419.425":
+  entity banco_reg at 1( 0) + 0 on 101;
+  architecture a_banco_reg of banco_reg at 18( 596) + 0 on 102;
+file . "reg16bits_tb.vhdl" "b352f5c574d7af4318ea6492385161adf6c3eddb" "20181002005024.478":
+  entity reg16bits_tb at 1( 0) + 0 on 75;
+  architecture a_reg16bits_tb of reg16bits_tb at 9( 115) + 0 on 76;
+file . "pc.vhdl" "8dea09a0383806b927766c022ee6e899fa97a43f" "20181017010719.417":
+  entity pc at 1( 0) + 0 on 157;
+  architecture a_pc of pc at 14( 262) + 0 on 158;
