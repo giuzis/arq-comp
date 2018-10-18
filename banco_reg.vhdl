@@ -8,9 +8,9 @@ entity banco_reg is
 			read_data_1, read_data_2: 	out unsigned(15 downto 0); 	-- Read data 1 e 2
 			clk: 						in std_logic; --Clock universal
 			rst: 						in std_logic; --Reset universal
-			read_reg_1: 				in unsigned(2 downto 0); -- Read register 1
-			read_reg_2: 				in unsigned(2 downto 0); -- Read register 2
-			write_reg:					in unsigned(2 downto 0); -- Write register
+			read_reg_1: 				in unsigned(3 downto 0); -- Read register 1
+			read_reg_2: 				in unsigned(3 downto 0); -- Read register 2
+			write_reg:					in unsigned(3 downto 0); -- Write register
 			en_write:					in std_logic  -- Enable write
 		);
 end entity;
@@ -43,36 +43,36 @@ architecture a_banco_reg of banco_reg is
 
 		--Definindo READ no REG01 (enviado pela ULA) baseado no read_reg_1
 		--000 Seleciona o registrador 0;
-		read_data_1 <=  "0000000000000000" WHEN read_reg_1="000" ELSE 
-						out_01 WHEN read_reg_1="001" ELSE 
-						out_02 WHEN read_reg_1="010" ELSE
-						out_03 WHEN read_reg_1="011" ELSE
-						out_04 WHEN read_reg_1="100" ELSE
-						out_05 WHEN read_reg_1="101" ELSE
-						out_06 WHEN read_reg_1="110" ELSE
-						out_07 WHEN read_reg_1="111" ELSE
+		read_data_1 <=  "0000000000000000" WHEN read_reg_1="0000" ELSE 
+						out_01 WHEN read_reg_1="0001" ELSE 
+						out_02 WHEN read_reg_1="0010" ELSE
+						out_03 WHEN read_reg_1="0011" ELSE
+						out_04 WHEN read_reg_1="0100" ELSE
+						out_05 WHEN read_reg_1="0101" ELSE
+						out_06 WHEN read_reg_1="0110" ELSE
+						out_07 WHEN read_reg_1="0111" ELSE
 						"0000000000000000";
 
 		--Definindo READ no REG02 (enviado pela ULA) baseado no read_reg_2
 		--000 Seleciona o registrador 0;
-		read_data_2 <=  "0000000000000000" WHEN read_reg_2="000" ELSE 
-						out_01 WHEN read_reg_2="001" ELSE 
-						out_02 WHEN read_reg_2="010" ELSE
-						out_03 WHEN read_reg_2="011" ELSE
-						out_04 WHEN read_reg_2="100" ELSE
-						out_05 WHEN read_reg_2="101" ELSE
-						out_06 WHEN read_reg_2="110" ELSE
-						out_07 WHEN read_reg_2="111" ELSE
+		read_data_2 <=  "0000000000000000" WHEN read_reg_2="0000" ELSE 
+						out_01 WHEN read_reg_2="0001" ELSE 
+						out_02 WHEN read_reg_2="0010" ELSE
+						out_03 WHEN read_reg_2="0011" ELSE
+						out_04 WHEN read_reg_2="0100" ELSE
+						out_05 WHEN read_reg_2="0101" ELSE
+						out_06 WHEN read_reg_2="0110" ELSE
+						out_07 WHEN read_reg_2="0111" ELSE
 						"0000000000000000";
 
 		-- Aqueles troço lá dos enables
-		en_01 <= '1' WHEN en_write='1' AND write_reg="001" ELSE '0';
-		en_02 <= '1' WHEN en_write='1' AND write_reg="010" ELSE '0';
-		en_03 <= '1' WHEN en_write='1' AND write_reg="011" ELSE '0';
-		en_04 <= '1' WHEN en_write='1' AND write_reg="100" ELSE '0';
-		en_05 <= '1' WHEN en_write='1' AND write_reg="101" ELSE '0';
-		en_06 <= '1' WHEN en_write='1' AND write_reg="110" ELSE '0';
-		en_07 <= '1' WHEN en_write='1' AND write_reg="111" ELSE '0';
+		en_01 <= '1' WHEN en_write='1' AND write_reg="0001" ELSE '0';
+		en_02 <= '1' WHEN en_write='1' AND write_reg="0010" ELSE '0';
+		en_03 <= '1' WHEN en_write='1' AND write_reg="0011" ELSE '0';
+		en_04 <= '1' WHEN en_write='1' AND write_reg="0100" ELSE '0';
+		en_05 <= '1' WHEN en_write='1' AND write_reg="0101" ELSE '0';
+		en_06 <= '1' WHEN en_write='1' AND write_reg="0110" ELSE '0';
+		en_07 <= '1' WHEN en_write='1' AND write_reg="0111" ELSE '0';
 
 
 end architecture;

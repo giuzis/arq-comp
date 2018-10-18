@@ -5,11 +5,11 @@ use ieee.numeric_std.all;
 entity proto_uc_jump is
 	port(
 			clk : in std_logic;
-			rst : in std_logic;
-			wr_en : in std_logic;
+			pc_rst : in std_logic;
+			pc_wr_en : in std_logic;
 			jump_flag : in std_logic;
-			data_in : in unsigned(6 downto 0);
-			data_out : out unsigned(6 downto 0)
+			pc_data_in : in unsigned(6 downto 0);
+			pc_data_out : out unsigned(6 downto 0)
 		);
 end entity;
 
@@ -32,13 +32,13 @@ begin
 						data_out => data_out_s,
 						data_in  => data_in_s,
 						clk 	 => clk,
-			 			rst 	 => rst,
-						wr_en	 => wr_en
+			 			rst 	 => pc_rst,
+						wr_en	 => pc_wr_en
 						);
 
 	data_in_s <= data_out_s + "0000001" when jump_flag = '0' else
-				 data_in;
-	data_out <= data_out_s;
+				 pc_data_in;
+	pc_data_out <= data_out_s;
 
 	
 end architecture a_proto_uc_jump;
