@@ -16,11 +16,16 @@ architecture a_toplevel_tb of toplevel_tb is
 		);
 	end component toplevel;
 
-	signal clk, rst: std_logic;
+	signal clk, rst, saida_ula_maior: std_logic;
+	signal instr, saida_ula: unsigned(15 downto 0);
 
 	begin
 
-	 uut: toplevel port map(clk => clk, rst => rst);
+	 uut: toplevel port map(clk => clk, 
+	 						rst => rst,
+	 						saida_ula => saida_ula,
+	 						saida_ula_maior => saida_ula_maior,
+	 						instr => instr);
 
 	 process -- sinal de clock
 	 begin

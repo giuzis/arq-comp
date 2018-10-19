@@ -179,6 +179,8 @@ begin
 	);
 
 	banco_reg_s:	banco_reg port map (
+						clk => clk,
+						rst => rst,
 						data => saida_ula_s,
 						read_data_1 => data_src,
 						read_data_2 => entrada02_ula,

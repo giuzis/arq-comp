@@ -12,12 +12,12 @@ architecture a_ula_tb of ula_tb is
 			seletor: 				in unsigned (1 downto 0);
 			entrada01,entrada02:    in unsigned(15 downto 0);
 			saida_ula:      		out unsigned(15 downto 0);
-			saida_maior:	  		out unsigned(0 downto 0)
+			saida_maior:	  		out std_logic
 		);
 	end component ula;
 	signal entrada01, entrada02, saida_ula:	unsigned(15 downto 0);
 	signal seletor: 						unsigned(1 downto 0);
- 	signal saida_maior: 					unsigned(0 downto 0);
+ 	signal saida_maior: 					std_logic;
 begin
 	uut:ula port map (	entrada01 	=> entrada01,
 						entrada02 	=> entrada02,

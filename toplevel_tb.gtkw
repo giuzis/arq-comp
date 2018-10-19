@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Fri Oct 19 04:28:49 2018
+[*]
+[dumpfile] "/home/giuliana/Documents/arq-comp/arq-comp/toplevel_tb.ghw"
+[dumpfile_mtime] "Fri Oct 19 04:14:41 2018"
+[dumpfile_size] 7354
+[savefile] "/home/giuliana/Documents/arq-comp/arq-comp/toplevel_tb.gtkw"
+[timestart] 2000000000
+[size] 1366 744
+[pos] -1 -1
+*-28.746794 2331000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.toplevel_tb.
+[treeopen] top.toplevel_tb.uut.
+[treeopen] top.toplevel_tb.uut.banco_reg_s.
+[treeopen] top.toplevel_tb.uut.mux_reg.
+[treeopen] top.toplevel_tb.uut.proto_uc_jump_s.
+[treeopen] top.toplevel_tb.uut.rom_s.
+[treeopen] top.toplevel_tb.uut.ula_reg.
+[sst_width] 223
+[signals_width] 200
+[sst_expanded] 1
+[sst_vpaned_height] 273
+@22
+#{top.toplevel_tb.uut.rom_s.endereco[5:0]} top.toplevel_tb.uut.rom_s.endereco[5] top.toplevel_tb.uut.rom_s.endereco[4] top.toplevel_tb.uut.rom_s.endereco[3] top.toplevel_tb.uut.rom_s.endereco[2] top.toplevel_tb.uut.rom_s.endereco[1] top.toplevel_tb.uut.rom_s.endereco[0]
+@29
+#{top.toplevel_tb.uut.estado_s[1:0]} top.toplevel_tb.uut.estado_s[1] top.toplevel_tb.uut.estado_s[0]
+@28
+top.toplevel_tb.clk
+@22
+#{top.toplevel_tb.uut.instr_s[15:0]} top.toplevel_tb.uut.instr_s[15] top.toplevel_tb.uut.instr_s[14] top.toplevel_tb.uut.instr_s[13] top.toplevel_tb.uut.instr_s[12] top.toplevel_tb.uut.instr_s[11] top.toplevel_tb.uut.instr_s[10] top.toplevel_tb.uut.instr_s[9] top.toplevel_tb.uut.instr_s[8] top.toplevel_tb.uut.instr_s[7] top.toplevel_tb.uut.instr_s[6] top.toplevel_tb.uut.instr_s[5] top.toplevel_tb.uut.instr_s[4] top.toplevel_tb.uut.instr_s[3] top.toplevel_tb.uut.instr_s[2] top.toplevel_tb.uut.instr_s[1] top.toplevel_tb.uut.instr_s[0]
+@24
+#{top.toplevel_tb.saida_ula[15:0]} top.toplevel_tb.saida_ula[15] top.toplevel_tb.saida_ula[14] top.toplevel_tb.saida_ula[13] top.toplevel_tb.saida_ula[12] top.toplevel_tb.saida_ula[11] top.toplevel_tb.saida_ula[10] top.toplevel_tb.saida_ula[9] top.toplevel_tb.saida_ula[8] top.toplevel_tb.saida_ula[7] top.toplevel_tb.saida_ula[6] top.toplevel_tb.saida_ula[5] top.toplevel_tb.saida_ula[4] top.toplevel_tb.saida_ula[3] top.toplevel_tb.saida_ula[2] top.toplevel_tb.saida_ula[1] top.toplevel_tb.saida_ula[0]
+@28
+top.toplevel_tb.uut.banco_reg_s.en_write
+@22
+#{top.toplevel_tb.uut.end_dest[3:0]} top.toplevel_tb.uut.end_dest[3] top.toplevel_tb.uut.end_dest[2] top.toplevel_tb.uut.end_dest[1] top.toplevel_tb.uut.end_dest[0]
+@24
+#{top.toplevel_tb.uut.entrada02_ula[15:0]} top.toplevel_tb.uut.entrada02_ula[15] top.toplevel_tb.uut.entrada02_ula[14] top.toplevel_tb.uut.entrada02_ula[13] top.toplevel_tb.uut.entrada02_ula[12] top.toplevel_tb.uut.entrada02_ula[11] top.toplevel_tb.uut.entrada02_ula[10] top.toplevel_tb.uut.entrada02_ula[9] top.toplevel_tb.uut.entrada02_ula[8] top.toplevel_tb.uut.entrada02_ula[7] top.toplevel_tb.uut.entrada02_ula[6] top.toplevel_tb.uut.entrada02_ula[5] top.toplevel_tb.uut.entrada02_ula[4] top.toplevel_tb.uut.entrada02_ula[3] top.toplevel_tb.uut.entrada02_ula[2] top.toplevel_tb.uut.entrada02_ula[1] top.toplevel_tb.uut.entrada02_ula[0]
+#{top.toplevel_tb.uut.banco_reg_s.data[15:0]} top.toplevel_tb.uut.banco_reg_s.data[15] top.toplevel_tb.uut.banco_reg_s.data[14] top.toplevel_tb.uut.banco_reg_s.data[13] top.toplevel_tb.uut.banco_reg_s.data[12] top.toplevel_tb.uut.banco_reg_s.data[11] top.toplevel_tb.uut.banco_reg_s.data[10] top.toplevel_tb.uut.banco_reg_s.data[9] top.toplevel_tb.uut.banco_reg_s.data[8] top.toplevel_tb.uut.banco_reg_s.data[7] top.toplevel_tb.uut.banco_reg_s.data[6] top.toplevel_tb.uut.banco_reg_s.data[5] top.toplevel_tb.uut.banco_reg_s.data[4] top.toplevel_tb.uut.banco_reg_s.data[3] top.toplevel_tb.uut.banco_reg_s.data[2] top.toplevel_tb.uut.banco_reg_s.data[1] top.toplevel_tb.uut.banco_reg_s.data[0]
+[pattern_trace] 1
+[pattern_trace] 0
