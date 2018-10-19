@@ -8,8 +8,8 @@ entity proto_uc_jump is
 			pc_rst : in std_logic;
 			pc_wr_en : in std_logic;
 			jump_flag : in std_logic;
-			pc_data_in : in unsigned(6 downto 0);
-			pc_data_out : out unsigned(6 downto 0)
+			pc_data_in : in unsigned(5 downto 0);
+			pc_data_out : out unsigned(5 downto 0)
 		);
 end entity;
 
@@ -19,12 +19,12 @@ architecture a_proto_uc_jump of proto_uc_jump is
 			clk : in std_logic;
 			rst : in std_logic;
 			wr_en : in std_logic;
-			data_in : in unsigned(6 downto 0);
-			data_out : out unsigned(6 downto 0)
+			data_in : in unsigned(5 downto 0);
+			data_out : out unsigned(5 downto 0)
 	 	);
 	end component pc;
 	
-	signal data_in_s, data_out_s : unsigned(6 downto 0);
+	signal data_in_s, data_out_s : unsigned(5 downto 0);
 
 begin
 
@@ -36,7 +36,7 @@ begin
 						wr_en	 => pc_wr_en
 						);
 
-	data_in_s <= data_out_s + "0000001" when jump_flag = '0' else
+	data_in_s <= data_out_s + "000001" when jump_flag = '0' else
 				 pc_data_in;
 	pc_data_out <= data_out_s;
 

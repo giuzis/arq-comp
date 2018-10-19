@@ -20,7 +20,7 @@ begin
 	opcode <= instr(15 downto 12);
 	src <= instr(11 downto 8);
 	dest <= instr(3 downto 0);
-	end_jump <= instr(6 downto 0);
+	end_jump <= instr(5 downto 0);
 	immediate <= instr(11 downto 4);
 
 	

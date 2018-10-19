@@ -8,7 +8,7 @@ entity maquina_estados is
 	 );
 end entity;
 
-architecture a_maquina_estados of maqquina_estados is
+architecture a_maquina_estados of maquina_estados is
 	 signal estado_s: unsigned(1 downto 0);
 	begin
 		 process(clk,rst)

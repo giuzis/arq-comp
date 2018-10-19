@@ -13,7 +13,7 @@ entity banco_reg is
 			write_reg:					in unsigned(3 downto 0); -- Write register
 			en_write:					in std_logic  -- Enable write
 		);
-end entity;
+end entity banco_reg;
 
 architecture a_banco_reg of banco_reg is
 	component reg16bits is
@@ -24,7 +24,7 @@ architecture a_banco_reg of banco_reg is
 			 	data_in : 	in unsigned(15 downto 0);
 			 	data_out :  out unsigned(15 downto 0)
 			);
-	end component;
+	end component reg16bits;
 
 	--Sinais de saída para os 7 registradores (o 8 é o 0)
 	signal out_01, out_02, out_03, out_04, out_05, out_06, out_07, out_08 : unsigned(15 downto 0);
@@ -75,4 +75,4 @@ architecture a_banco_reg of banco_reg is
 		en_07 <= '1' WHEN en_write='1' AND write_reg="0111" ELSE '0';
 
 
-end architecture;
+end architecture a_banco_reg;

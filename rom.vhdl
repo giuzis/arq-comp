@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity rom is
 	port(
 		clk : in std_logic;
-		endereco : in unsigned(6 downto 0);
+		endereco : in unsigned(5 downto 0);
 		instr : out unsigned(15 downto 0)
 	);
 end entity rom;
@@ -35,7 +35,7 @@ architecture a_rom of rom is
 		18 => "0000000000000000", -- nop
 		19 => "0000000000000000", -- nop
 		20 => "0100010110100011", -- MOV R5,R3
-		21 => "0011100100000011" -- jump para o endereco 3
+		21 => "0011100100000011", -- jump para o endereco 3
 		-- abaixo: casos omissos => (zero em todos os bits)
 		others => (others=>'0')
 	);
