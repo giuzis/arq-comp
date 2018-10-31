@@ -22,8 +22,8 @@ begin
 	update_pc 	<= 	'1' when maquina_de_estados = "10" else -- fetch/qualquer instrucao => atualiza PC
 					'0';
 	
-	mux_reg_flag	<= 	'1' when opcode = "0100" and maquina_de_estados = "00" else -- decode/mov => mux_reg quando é 1 manda ler o reg0 ao invés de dest, assim, a ula soma o source com 0
-					'0';
+	mux_reg_flag	<= 	'1' when opcode = "0100" else -- decode/mov => mux_reg quando é 1 manda ler o reg0 ao invés de dest, assim, a ula soma o source com 0
+						'0';
 
 	mux_immediate_flag	<= '1' when opcode = "0001" and maquina_de_estados = "00" else -- decode/addi => mux_immediate quando é 1 manda o imediato ao invés do dado do src
 					   '0';
@@ -35,7 +35,7 @@ begin
 					or opcode = "0001") -- execute/addi => manda escrever o resultado da ula (soma_immediate) no registrador dst
 					else '0';
 	
-	jump_flag 	<=	'1' when opcode = "0011" else -- qualquer estado/jmp => ativa jump_flag
+	jump_flag 	<=	'1' when opcode = "0011" and maquina_de_estados = "10" else -- qualquer estado/jmp => ativa jump_flag
 	 			  	'0';
 	
 	operation_ula <= "00" WHEN opcode = "0101" or opcode = "0001" else -- qualquer estado/add/addi => manda a ula somar

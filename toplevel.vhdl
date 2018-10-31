@@ -186,7 +186,7 @@ begin
 						read_data_2 => entrada02_ula,
 						read_reg_1 => end_src,
 						read_reg_2 => end_reg_2,
-						write_reg => end_reg_2,
+						write_reg => end_dest,
 						en_write => reg_wr_en
 	);
 
