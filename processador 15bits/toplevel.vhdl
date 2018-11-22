@@ -33,13 +33,12 @@ architecture a_toplevel of toplevel is
 
 	component ram is
 		port(
-				clk : in std_logic;
-				endereco : in unsigned(15 downto 0);
+				clk 	 : in std_logic;
+				endereco : in unsigned(6 downto 0);
 				wr_en    : in std_logic;
 				dado_in  : in unsigned(15 downto 0);
 				dado_out : out unsigned(15 downto 0)
-
-		);
+			);
 	end component ram;
 
 	component maquina_estados is
@@ -61,15 +60,9 @@ architecture a_toplevel of toplevel is
   				mux_immediate_flag	: out std_logic;
   				maquina_de_estados	: in unsigned(1 downto 0);
   				z_bit, c_bit, n_bit	: in std_logic;
-  				as_ad				: in unsigned(1 downto 0);
   				operation_ula		: out unsigned(1 downto 0);
   				update_ula_out		: out std_logic;
-  				reg_flags_wr_en		: out std_logic;
-				mux_ula_ram			: out std_logic;
-				mux_ram_banco		: out std_logic;
-				mux_sel01			: out std_logic;
-				mux_sel02			: out std_logic;
-				ram_wr_en			: out std_logic
+  				reg_flags_wr_en		: out std_logic
   		);
 	end component unidade_de_controle;
 
@@ -119,7 +112,6 @@ architecture a_toplevel of toplevel is
 			opcode: out unsigned(3 downto 0);
 			src: out unsigned(3 downto 0);
 			dest: out unsigned(3 downto 0);
-			as_ad: out unsigned(1 downto 0);
 			end_jump: out unsigned(5 downto 0);
 			immediate: out unsigned(7 downto 0);
 			opcode_jump: out unsigned(5 downto 0)
@@ -137,13 +129,17 @@ architecture a_toplevel of toplevel is
 	end component reg_flags;
 
 	signal endereco_s, endereco_jump: unsigned(5 downto 0);
-	signal instr_s, saida_ula_s, entrada01_ula, saida_mux_ula_ram, ram_dado_out, zero_16bits, entrada02_ula, data_src, immediate_ext, saida_mux01, data_dest, ram_address: unsigned(15 downto 0);
-	signal pc_wr_en, jump_flag, erro_flag, sel02, sel_ram_banco, sel01, enable_mux, sel_ula_ram, reg_wr_en, mux_reg_flag, mux_immediate_flag, reg_flags_wr_en, ram_wr_en: std_logic;
+	signal instr_s, saida_ula_s, entrada01_ula, entrada02_ula, data_src, immediate_ext: unsigned(15 downto 0);
+	signal pc_wr_en, jump_flag, erro_flag, enable_mux, reg_wr_en, mux_reg_flag, mux_immediate_flag, reg_flags_wr_en: std_logic;
 	signal opcode, end_src, end_dest, end_reg_2, zero: unsigned(3 downto 0);
 	signal immediate: unsigned(7 downto 0);
 	signal opcode_jump: unsigned(5 downto 0);
-	signal operation_ula, estado_s, as_ad: unsigned(1 downto 0);
+	signal operation_ula, estado_s: unsigned(1 downto 0);
 	signal c_bit_out_ula, z_bit_out_ula, n_bit_out_ula, c_bit, z_bit, n_bit: std_logic;
+	--Sinais da RAM
+	signal ram_data_in, ram_data_out: unsigned(15 downto 0);
+	signal ram_address: unsigned(6 downto 0);
+	signal ram_wr_en: std_logic;
 
 begin
 
@@ -174,13 +170,12 @@ begin
 						instr	 => instr_s
 	);
 
-	ram_s: 		ram port map(
-
-				clk => clk,
-				endereco => ram_address,
-				wr_en    => ram_wr_en;
-				dado_in  => saida_ula_s;
-				dado_out => ram_dado_out
+	ram_s:	ram port map(
+						clk => clk,
+						endereco => ram_address,
+						dado_in => ram_data_in,
+						dado_out => ram_data_out,
+						wr_en => ram_wr_en
 	);
 
 	fsm_s:		maquina_estados port map (
@@ -202,14 +197,7 @@ begin
 						z_bit => z_bit,
 						c_bit => c_bit,
 						n_bit => n_bit,
-						as_ad => as_ad,
-						reg_flags_wr_en => reg_flags_wr_en,
-						mux_ula_ram	=> sel_ula_ram,
-						mux_ram_banco => sel_ram_banco,
-						mux_sel01 => mux_sel01,
-						mux_sel02 => mux_sel02,
-						ram_wr_en => ram_wr_en
-
+						reg_flags_wr_en => reg_flags_wr_en
 	);
 
 	barramento_s: barramento port map (
@@ -217,7 +205,6 @@ begin
 						opcode => opcode,
 						src => end_src,
 						dest => end_dest,
-						as_ad => as_ad,
 						end_jump => endereco_jump,
 						immediate => immediate,
 						opcode_jump => opcode_jump
@@ -232,43 +219,11 @@ begin
 	);
 
 	mux_immediate: mux2x1_16bits port map (
-						entrada01 => saida_mux01,
+						entrada01 => data_src,
 						entrada02 => immediate_ext,
 						enable => enable_mux,
 						seletor => mux_immediate_flag,
 						saida => entrada01_ula
-	);
-
-	mux_01: mux2x1_16bits port map (
-						entrada01 => data_s,
-						entrada02 => zero_16bits,
-						enable => enable_mux,
-						seletor => sel01,
-						saida => saida_mux01
-	);
-
-	mux_02: mux2x1_16bits port map (
-						entrada01 => data_dest,
-						entrada02 => zero_16bits,
-						enable => enable_mux,
-						seletor => sel02,
-						saida => entrada02_ula
-	);
-
-	mux_ula_ram: mux2x1_16bits port map (
-						entrada01 => saida_ula_s,
-						entrada02 => ram_dado_out,
-						enable => enable_mux,
-						seletor => sel_ula_ram,
-						saida => saida_mux_ula_ram
-	);
-
-	mux_ram_banco: mux2x1_16bits port map (
-						entrada01 => data_src,
-						entrada02 => data_dest,
-						enable => enable_mux,
-						seletor => sel_ram_banco,
-						saida => ram_address
 	);
 
 	ula_s:		ula port map (
@@ -284,9 +239,9 @@ begin
 	banco_reg_s:	banco_reg port map (
 						clk => clk,
 						rst => rst,
-						data => saida_mux_ula_ram,
+						data => saida_ula_s,
 						read_data_1 => data_src,
-						read_data_2 => data_dest,
+						read_data_2 => entrada02_ula,
 						read_reg_1 => end_src,
 						read_reg_2 => end_reg_2,
 						write_reg => end_dest,
@@ -303,7 +258,10 @@ begin
 
 	enable_mux <= '1';
 	zero <= "0000";
-	zero_16bits <= "0000000000000000";
+
+	--Barramentos(?) da RAM.
+	ram_data_in <= saida_ula_s;
+
 
 
 

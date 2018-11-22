@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Wed Nov  7 23:34:36 2018
+[*]
+[dumpfile] "/home/giuliana/Documents/arq-comp/arq-comp/toplevel_tb.ghw"
+[dumpfile_mtime] "Wed Nov  7 23:32:15 2018"
+[dumpfile_size] 9498
+[savefile] "/home/giuliana/Documents/arq-comp/arq-comp/toplevel_tb.gtkw"
+[timestart] 0
+[size] 1366 744
+[pos] -365 -116
+*-29.795702 3657000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.toplevel_tb.
+[treeopen] top.toplevel_tb.uut.
+[treeopen] top.toplevel_tb.uut.banco_reg_s.
+[sst_width] 43
+[signals_width] 216
+[sst_expanded] 0
+[sst_vpaned_height] 273
+@28
+top.toplevel_tb.rst
+top.toplevel_tb.clk
+#{top.toplevel_tb.uut.estado_s[1:0]} top.toplevel_tb.uut.estado_s[1] top.toplevel_tb.uut.estado_s[0]
+@24
+#{top.toplevel_tb.uut.endereco_s[5:0]} top.toplevel_tb.uut.endereco_s[5] top.toplevel_tb.uut.endereco_s[4] top.toplevel_tb.uut.endereco_s[3] top.toplevel_tb.uut.endereco_s[2] top.toplevel_tb.uut.endereco_s[1] top.toplevel_tb.uut.endereco_s[0]
+@22
+#{top.toplevel_tb.instr[15:0]} top.toplevel_tb.instr[15] top.toplevel_tb.instr[14] top.toplevel_tb.instr[13] top.toplevel_tb.instr[12] top.toplevel_tb.instr[11] top.toplevel_tb.instr[10] top.toplevel_tb.instr[9] top.toplevel_tb.instr[8] top.toplevel_tb.instr[7] top.toplevel_tb.instr[6] top.toplevel_tb.instr[5] top.toplevel_tb.instr[4] top.toplevel_tb.instr[3] top.toplevel_tb.instr[2] top.toplevel_tb.instr[1] top.toplevel_tb.instr[0]
+@421
+#{top.toplevel_tb.uut.banco_reg_s.read_data_1[15:0]} top.toplevel_tb.uut.banco_reg_s.read_data_1[15] top.toplevel_tb.uut.banco_reg_s.read_data_1[14] top.toplevel_tb.uut.banco_reg_s.read_data_1[13] top.toplevel_tb.uut.banco_reg_s.read_data_1[12] top.toplevel_tb.uut.banco_reg_s.read_data_1[11] top.toplevel_tb.uut.banco_reg_s.read_data_1[10] top.toplevel_tb.uut.banco_reg_s.read_data_1[9] top.toplevel_tb.uut.banco_reg_s.read_data_1[8] top.toplevel_tb.uut.banco_reg_s.read_data_1[7] top.toplevel_tb.uut.banco_reg_s.read_data_1[6] top.toplevel_tb.uut.banco_reg_s.read_data_1[5] top.toplevel_tb.uut.banco_reg_s.read_data_1[4] top.toplevel_tb.uut.banco_reg_s.read_data_1[3] top.toplevel_tb.uut.banco_reg_s.read_data_1[2] top.toplevel_tb.uut.banco_reg_s.read_data_1[1] top.toplevel_tb.uut.banco_reg_s.read_data_1[0]
+@420
+#{top.toplevel_tb.uut.banco_reg_s.read_data_2[15:0]} top.toplevel_tb.uut.banco_reg_s.read_data_2[15] top.toplevel_tb.uut.banco_reg_s.read_data_2[14] top.toplevel_tb.uut.banco_reg_s.read_data_2[13] top.toplevel_tb.uut.banco_reg_s.read_data_2[12] top.toplevel_tb.uut.banco_reg_s.read_data_2[11] top.toplevel_tb.uut.banco_reg_s.read_data_2[10] top.toplevel_tb.uut.banco_reg_s.read_data_2[9] top.toplevel_tb.uut.banco_reg_s.read_data_2[8] top.toplevel_tb.uut.banco_reg_s.read_data_2[7] top.toplevel_tb.uut.banco_reg_s.read_data_2[6] top.toplevel_tb.uut.banco_reg_s.read_data_2[5] top.toplevel_tb.uut.banco_reg_s.read_data_2[4] top.toplevel_tb.uut.banco_reg_s.read_data_2[3] top.toplevel_tb.uut.banco_reg_s.read_data_2[2] top.toplevel_tb.uut.banco_reg_s.read_data_2[1] top.toplevel_tb.uut.banco_reg_s.read_data_2[0]
+#{top.toplevel_tb.uut.saida_ula[15:0]} top.toplevel_tb.uut.saida_ula[15] top.toplevel_tb.uut.saida_ula[14] top.toplevel_tb.uut.saida_ula[13] top.toplevel_tb.uut.saida_ula[12] top.toplevel_tb.uut.saida_ula[11] top.toplevel_tb.uut.saida_ula[10] top.toplevel_tb.uut.saida_ula[9] top.toplevel_tb.uut.saida_ula[8] top.toplevel_tb.uut.saida_ula[7] top.toplevel_tb.uut.saida_ula[6] top.toplevel_tb.uut.saida_ula[5] top.toplevel_tb.uut.saida_ula[4] top.toplevel_tb.uut.saida_ula[3] top.toplevel_tb.uut.saida_ula[2] top.toplevel_tb.uut.saida_ula[1] top.toplevel_tb.uut.saida_ula[0]
+[pattern_trace] 1
+[pattern_trace] 0
