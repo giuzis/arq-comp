@@ -20,19 +20,29 @@ architecture a_toplevel of toplevel is
 				jump_flag : in std_logic;
 				pc_data_in : in unsigned(5 downto 0);
 				pc_data_out : out unsigned(5 downto 0)
-	 	);	
+	 	);
 	end component proto_uc_jump;
 
 	component rom is
-		port( 
+		port(
 				clk : in std_logic;
 				endereco : in unsigned(5 downto 0);
 				instr : out unsigned(15 downto 0)
 		);
 	end component rom;
 
+	component ram is
+		port(
+				clk 	 : in std_logic;
+				endereco : in unsigned(6 downto 0);
+				wr_en    : in std_logic;
+				dado_in  : in unsigned(15 downto 0);
+				dado_out : out unsigned(15 downto 0)
+			);
+	end component ram;
+
 	component maquina_estados is
-	 	port(   
+	 	port(
 	 			clk : in std_logic;
 				rst : in std_logic;
 				estado: out unsigned(1 downto 0)
@@ -54,7 +64,7 @@ architecture a_toplevel of toplevel is
   				update_ula_out		: out std_logic;
   				reg_flags_wr_en		: out std_logic
   		);
-	end component unidade_de_controle; 
+	end component unidade_de_controle;
 
 	component banco_reg is
 		port(
@@ -114,10 +124,10 @@ architecture a_toplevel of toplevel is
 	 		rst : in std_logic;
 	 		wr_en : in std_logic;
 	 		c_bit_in, n_bit_in, z_bit_in : in std_logic;
-	 		c_bit_out, n_bit_out, z_bit_out : out std_logic	
+	 		c_bit_out, n_bit_out, z_bit_out : out std_logic
 		);
 	end component reg_flags;
-	
+
 	signal endereco_s, endereco_jump: unsigned(5 downto 0);
 	signal instr_s, saida_ula_s, entrada01_ula, entrada02_ula, data_src, immediate_ext: unsigned(15 downto 0);
 	signal pc_wr_en, jump_flag, erro_flag, enable_mux, reg_wr_en, mux_reg_flag, mux_immediate_flag, reg_flags_wr_en: std_logic;
@@ -126,7 +136,11 @@ architecture a_toplevel of toplevel is
 	signal opcode_jump: unsigned(5 downto 0);
 	signal operation_ula, estado_s: unsigned(1 downto 0);
 	signal c_bit_out_ula, z_bit_out_ula, n_bit_out_ula, c_bit, z_bit, n_bit: std_logic;
-
+	--Sinais da RAM
+	signal ram_data_in, ram_data_out: unsigned(15 downto 0);
+	signal ram_address: unsigned(6 downto 0);
+	signal ram_wr_en, ram_mux_en, seletor_mux_ram: std_logic;
+	signal read_data_2: unsigned(15 downto 0);
 begin
 
 	proto_uc_jump_s: proto_uc_jump port map (
@@ -139,7 +153,7 @@ begin
 	);
 
 	reg_flags_s:	reg_flags port map (
-						clk 	=> clk,	
+						clk 	=> clk,
 	 					rst 	=> rst,
 	 					wr_en 	=> reg_flags_wr_en,
 	 					c_bit_in => c_bit_out_ula,
@@ -154,6 +168,14 @@ begin
 						clk 	 => clk,
 			 			endereco => endereco_s,
 						instr	 => instr_s
+	);
+
+	ram_s:	ram port map(
+						clk => clk,
+						endereco => ram_address,
+						dado_in => ram_data_in,
+						dado_out => ram_data_out,
+						wr_en => ram_wr_en
 	);
 
 	fsm_s:		maquina_estados port map (
@@ -204,6 +226,14 @@ begin
 						saida => entrada01_ula
 	);
 
+	mux_ram: mux2x1_16bits port map (
+						entrada01 => read_data_2,
+						entrada02 => ram_data_out,
+						enable => ram_mux_en,
+						seletor => seletor_mux_ram,
+						saida => entrada02_ula
+	);
+
 	ula_s:		ula port map (
 						seletor => operation_ula,
 						entrada01 => entrada01_ula,
@@ -237,9 +267,12 @@ begin
 	enable_mux <= '1';
 	zero <= "0000";
 
+	--Barramentos(?) da RAM.
+	ram_data_in <= saida_ula_s;
 
 
 
 
-	
+
+
 end architecture a_toplevel;
