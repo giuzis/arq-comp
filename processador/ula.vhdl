@@ -39,7 +39,6 @@ begin
 	z_bit <= 		'1'												WHEN soma_16 = "0000000000000000" else
 					'0';
 
-	-- verificar se isso faz sentido
 	c_bit <= 		soma_17(16);
 
 	saida_ula <= soma_16;
