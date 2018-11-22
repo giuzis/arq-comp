@@ -39,9 +39,9 @@ begin
 
 	mult <= pc_data_in & '0';
 
-	soma <= data_out_s + 2;
+	soma <= data_out_s + 1;
 
-	soma_mult <= soma + mult(5 downto 0);
+	soma_mult <= soma + pc_data_in;
 
 	data_in_s <= soma when jump_flag = '0' else
 				 soma_mult;
