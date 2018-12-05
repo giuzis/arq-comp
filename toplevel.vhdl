@@ -138,7 +138,7 @@ architecture a_toplevel of toplevel is
 
 	signal endereco_s, endereco_jump: unsigned(5 downto 0);
 	signal instr_s, saida_ula_s, entrada01_ula, saida_mux_ula_ram, ram_dado_out, zero_16bits, entrada02_ula, data_src, immediate_ext, saida_mux01, data_dest, ram_address: unsigned(15 downto 0);
-	signal pc_wr_en, jump_flag, erro_flag, sel02, sel_ram_banco, sel01, enable_mux, sel_ula_ram, reg_wr_en, mux_reg_flag, mux_immediate_flag, reg_flags_wr_en, ram_wr_en: std_logic;
+	signal pc_wr_en, jump_flag, erro_flag, mux_sel02, sel_ram_banco, mux_sel01, enable_mux, sel_ula_ram, reg_wr_en, mux_reg_flag, mux_immediate_flag, reg_flags_wr_en, ram_wr_en: std_logic;
 	signal opcode, end_src, end_dest, end_reg_2, zero: unsigned(3 downto 0);
 	signal immediate: unsigned(7 downto 0);
 	signal opcode_jump: unsigned(5 downto 0);
@@ -178,8 +178,8 @@ begin
 
 				clk => clk,
 				endereco => ram_address,
-				wr_en    => ram_wr_en;
-				dado_in  => saida_ula_s;
+				wr_en    => ram_wr_en,
+				dado_in  => saida_ula_s,
 				dado_out => ram_dado_out
 	);
 
@@ -240,10 +240,10 @@ begin
 	);
 
 	mux_01: mux2x1_16bits port map (
-						entrada01 => data_s,
+						entrada01 => data_src,
 						entrada02 => zero_16bits,
 						enable => enable_mux,
-						seletor => sel01,
+						seletor => mux_sel01,
 						saida => saida_mux01
 	);
 
@@ -251,7 +251,7 @@ begin
 						entrada01 => data_dest,
 						entrada02 => zero_16bits,
 						enable => enable_mux,
-						seletor => sel02,
+						seletor => mux_sel02,
 						saida => entrada02_ula
 	);
 

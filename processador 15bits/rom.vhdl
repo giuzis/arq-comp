@@ -6,15 +6,15 @@ entity rom is
 	port(
 		clk : in std_logic;
 		endereco : in unsigned(5 downto 0);
-		instr : out unsigned(14 downto 0)
+		instr : out unsigned(15 downto 0)
 	);
 end entity rom;
 
 architecture a_rom of rom is
-	type mem is array (0 to 127) of unsigned(14 downto 0);
+	type mem is array (0 to 127) of unsigned(15 downto 0);
 	constant conteudo_rom : mem := (
 		-- caso endereco => conteudo
-		0 => "000000000000000", -- ADDI R3, 0
+		0 => "0001000000010010", -- ADDI R3, 0
 		1 => "000000000000000", -- ADDI R4, 0
 		2 => "000000000000000", -- ADDI R7, 30
 		3 => "000000000000000", -- ADD R4,R3

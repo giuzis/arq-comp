@@ -13,18 +13,16 @@ entity ram is
 end entity;
 ------------------------------------------------------------------------
 architecture a_ram of ram is
-	type mem is	array (0 to 127) 	of	 unsigned(15 downto	0);
+	type mem is	array (0 to 127) of	unsigned(15 downto 0);
 	signal	 conteudo_ram : mem;
-	signal ram_address: unsigned(6 downto 0);
-	ram_address <= endereco(7 downto 0);
 	begin
 		process (clk,wr_en)
 		begin
 			if rising_edge(clk) then
 				if	 wr_en=	'1'	then
-					conteudo_ram(to_integer(ram_address)) <= dado_in;
+					conteudo_ram(to_integer(endereco)) <= dado_in;
 				end	if			;
 			end	if;
 		end	process;
-		dado_out <= conteudo_ram(to_integer(ram_address));
+		dado_out <= conteudo_ram(to_integer(endereco));
 end	architecture;

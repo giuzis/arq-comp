@@ -1,97 +1,100 @@
 v 4
-file . "reg_flags.vhdl" "4d3e77a828881832697af8ea8ff2787f2eec3c97" "20181107154500.813":
-  entity reg_flags at 1( 0) + 0 on 653;
-  architecture a_reg_flags of reg_flags at 16( 281) + 0 on 654;
-file . "toplevel_tb.vhdl" "594bd0f04f257e807bc241d74bcc9a1745878f09" "20181107232853.009":
-  entity toplevel_tb at 1( 0) + 0 on 705;
-  architecture a_toplevel_tb of toplevel_tb at 8( 105) + 0 on 706;
-file . "barramento.vhdl" "31733e91a8589e0748f44c088920919514999d01" "20181107154007.806":
-  entity barramento at 1( 0) + 0 on 647;
-  architecture a_barramento of barramento at 17( 390) + 0 on 648;
-file . "toplevel_com_jump.vhdl" "7e2eae29ba54112f0fcb0c225563bb397d73d305" "20181017051328.010":
-  entity toplevel_com_jump at 1( 0) + 0 on 261;
-  architecture a_toplevel_com_jump of toplevel_com_jump at 13( 206) + 0 on 262;
-file . "toplevel_proto_uc_rom_fsm_tb.vhdl" "1e8b739b031cb0da90a7bf832363c85d06126aad" "20181017042250.346":
-  entity toplevel_proto_uc_rom_fsm_tb at 1( 0) + 0 on 233;
-  architecture a_toplevel_proto_uc_rom_fsm_tb of toplevel_proto_uc_rom_fsm_tb at 8( 122) + 0 on 234;
-file . "unidade_de_controle_tb.vhdl" "f14faeed65c33a9ecd33151a56e61baa877f9f8b" "20181018140132.091":
-  entity unidade_de_controle_tb at 1( 0) + 0 on 267;
-  architecture a_unidade_de_controle_tb of unidade_de_controle_tb at 8( 116) + 0 on 268;
-file . "unidade_de_controle.vhdl" "9e2b12054205523daa24f97d6b4bd4ddf3344371" "20181107235126.144":
-  entity unidade_de_controle at 1( 0) + 0 on 729;
-  architecture a_unidade_de_controle of unidade_de_controle at 22( 600) + 0 on 730;
-file . "rom.vhdl" "fba457f18110091bd3ecf636679dc763f40252a5" "20181108184347.466":
-  entity rom at 1( 0) + 0 on 769;
-  architecture a_rom of rom at 13( 208) + 0 on 770;
-file . "rom_proto_uc.vhdl" "7a7a41abe9fb38edab04d1b77bc8f8ff0b88b4ea" "20181017021311.567":
-  entity rom_proto_uc at 1( 0) + 0 on 197;
-  architecture a_rom_proto_uc of rom_proto_uc at 14( 225) + 0 on 198;
-file . "fsm.vhdl" "e49e4fc28b7582e241b48ae9c20e74178d8c9039" "20181017013131.197":
-  entity fsm at 1( 0) + 0 on 165;
-  architecture a_fsm of fsm at 15( 292) + 0 on 166;
-file . "pc.vhdl" "685825b4f1f6ded81c6cee2b7f79c02e515ee2bf" "20181018193806.112":
-  entity pc at 1( 0) + 0 on 275;
-  architecture a_pc of pc at 14( 260) + 0 on 276;
-file . "reg16bits_tb.vhdl" "b352f5c574d7af4318ea6492385161adf6c3eddb" "20181018202336.452":
-  entity reg16bits_tb at 1( 0) + 0 on 347;
-  architecture a_reg16bits_tb of reg16bits_tb at 9( 115) + 0 on 348;
-file . "banco_reg.vhdl" "69a538bcd5a273ff7b7e508e41903599358a36b7" "20181019024043.445":
-  entity banco_reg at 1( 0) + 0 on 361;
-  architecture a_banco_reg of banco_reg at 18( 606) + 0 on 362;
-file . "ula.vhdl" "9b0d22322ab415dfcd7adab747c4c7b8f9c01c71" "20181108002557.419":
-  entity ula at 1( 0) + 0 on 751;
-  architecture a_ula of ula at 14( 303) + 0 on 752;
-file . "ula_tb.vhdl" "85030889a300798ee2be11871372e39575556dd1" "20181019024723.413":
-  entity ula_tb at 1( 0) + 0 on 373;
-  architecture a_ula_tb of ula_tb at 9( 152) + 0 on 374;
-file . "banco_reg_tb.vhdl" "b91cc8a0e1fa438ab0cd8e4e38337894dd5357dc" "20181019024043.451":
-  entity banco_reg_tb at 1( 0) + 0 on 363;
-  architecture a_banco_reg_tb of banco_reg_tb at 8( 107) + 0 on 364;
-file . "reg16bits.vhdl" "cb39e213d8d231124c5c333dafb17ecff03eb96e" "20181018202314.877":
-  entity reg16bits at 1( 0) + 0 on 341;
-  architecture a_reg16bits of reg16bits at 16( 275) + 0 on 342;
-file . "banco_reg_ula_tb.vhdl" "8fb8984a8dfdeafe7149c3f4f8320c6ebae9423a" "20181002050246.499":
-  entity banco_reg_ula_tb at 1( 0) + 0 on 121;
-  architecture a_banco_reg_ula_tb of banco_reg_ula_tb at 8( 111) + 0 on 122;
-file . "banco_reg_ula.vhdl" "826688beb479a12da5ec0e17470d527401c2e41b" "20181002050244.781":
-  entity banco_reg_ula at 1( 0) + 0 on 119;
-  architecture a_banco_reg_ula of banco_reg_ula at 22( 715) + 0 on 120;
-file . "mux2x1.vhdl" "0de37f0fd0a293714f83c6d1fdf141e4fbffc3b4" "20181002045432.623":
-  entity mux2x1 at 1( 0) + 0 on 105;
-  architecture a_mux2x1 of mux2x1 at 14( 273) + 0 on 106;
-file . "proto_uc.vhdl" "9899b671aed5acdcbd32db7a8bef1fe182d5f6ed" "20181017020309.903":
-  entity proto_uc at 1( 0) + 0 on 173;
-  architecture a_proto_uc of proto_uc at 14( 224) + 0 on 174;
-file . "proto_uc_tb.vhdl" "138a374a46836f7f27fadb2fffa532b1aca44b37" "20181017011029.292":
-  entity proto_uc_tb at 1( 0) + 0 on 163;
-  architecture a_proto_uc_tb of proto_uc_tb at 8( 105) + 0 on 164;
-file . "pc_tb.vhdl" "f15bad8c36137b73e7442cd8e49b1373c837df2c" "20181017010719.427":
-  entity pc_tb at 1( 0) + 0 on 159;
-  architecture a_pc_tb of pc_tb at 8( 99) + 0 on 160;
-file . "fsm_tb.vhdl" "ec1d11feb23d26913b3ad0316bd6c6324e68cf65" "20181017013131.206":
-  entity fsm_tb at 1( 0) + 0 on 167;
-  architecture a_fsm_tb of fsm_tb at 8( 100) + 0 on 168;
-file . "rom_proto_uc_tb.vhdl" "2b57efcbd064931e32d8a15cb843dacd39dbd57d" "20181017021311.575":
-  entity rom_proto_uc_tb at 1( 0) + 0 on 199;
-  architecture a_rom_proto_uc_tb of rom_proto_uc_tb at 8( 109) + 0 on 200;
-file . "toplevel_proto_uc_rom_fsm.vhdl" "75354236c3d5638810201c6778a46922731f8a2b" "20181017042250.336":
-  entity toplevel_proto_uc_rom_fsm at 1( 0) + 0 on 231;
-  architecture a_toplevel_proto_uc_rom_fsm of toplevel_proto_uc_rom_fsm at 13( 214) + 0 on 232;
-file . "toplevel_com_jump_tb.vhdl" "67cef6603707d66c5a2bb65d5c9ee78336eb4c59" "20181017051328.023":
-  entity toplevel_com_jump_tb at 1( 0) + 0 on 263;
-  architecture a_toplevel_com_jump_tb of toplevel_com_jump_tb at 8( 114) + 0 on 264;
-file . "proto_uc_jump.vhdl" "21aa4b840855f3dac36335c2213c33798e2292f1" "20181108183737.371":
-  entity proto_uc_jump at 1( 0) + 0 on 765;
-  architecture a_proto_uc_jump of proto_uc_jump at 16( 308) + 0 on 766;
-file . "toplevel.vhdl" "f0ee88730814dd109f4bea6bffaa54675f53dea9" "20181108183741.495":
-  entity toplevel at 1( 0) + 0 on 767;
-  architecture a_toplevel of toplevel at 14( 239) + 0 on 768;
-file . "maquina_estados.vhdl" "773e90c773097f83f4cfa4470c5d7acabad6e49e" "20181018194246.997":
-  entity maquina_estados at 1( 0) + 0 on 279;
-  architecture a_maquina_estados of maquina_estados at 11( 183) + 0 on 280;
-file . "mux2x1_16bits.vhdl" "ac29ac766b8a58ed0bc1178e1261f4ab1234f423" "20181018194453.248":
-  entity mux2x1_16bits at 1( 0) + 0 on 289;
-  architecture a_mux2x1_16bits of mux2x1_16bits at 14( 280) + 0 on 290;
 file . "mux2x1_4bits.vhdl" "68fb3748c8b29b15543a52908e54b90eb33dd4f9" "20181019030459.364":
   entity mux2x1_4bits at 1( 0) + 0 on 381;
   architecture a_mux2x1_4bits of mux2x1_4bits at 14( 290) + 0 on 382;
+file . "mux2x1_16bits.vhdl" "ac29ac766b8a58ed0bc1178e1261f4ab1234f423" "20181018194453.248":
+  entity mux2x1_16bits at 1( 0) + 0 on 289;
+  architecture a_mux2x1_16bits of mux2x1_16bits at 14( 280) + 0 on 290;
+file . "maquina_estados.vhdl" "773e90c773097f83f4cfa4470c5d7acabad6e49e" "20181018194246.997":
+  entity maquina_estados at 1( 0) + 0 on 279;
+  architecture a_maquina_estados of maquina_estados at 11( 183) + 0 on 280;
+file . "toplevel.vhdl" "7d9c50d0f26cefacca499c01f3cd84abd2e8e39a" "20181203012158.499":
+  entity toplevel at 1( 0) + 0 on 795;
+  architecture a_toplevel of toplevel at 14( 239) + 0 on 796;
+file . "proto_uc_jump.vhdl" "21aa4b840855f3dac36335c2213c33798e2292f1" "20181108183737.371":
+  entity proto_uc_jump at 1( 0) + 0 on 765;
+  architecture a_proto_uc_jump of proto_uc_jump at 16( 308) + 0 on 766;
+file . "toplevel_com_jump_tb.vhdl" "67cef6603707d66c5a2bb65d5c9ee78336eb4c59" "20181017051328.023":
+  entity toplevel_com_jump_tb at 1( 0) + 0 on 263;
+  architecture a_toplevel_com_jump_tb of toplevel_com_jump_tb at 8( 114) + 0 on 264;
+file . "toplevel_proto_uc_rom_fsm.vhdl" "75354236c3d5638810201c6778a46922731f8a2b" "20181017042250.336":
+  entity toplevel_proto_uc_rom_fsm at 1( 0) + 0 on 231;
+  architecture a_toplevel_proto_uc_rom_fsm of toplevel_proto_uc_rom_fsm at 13( 214) + 0 on 232;
+file . "rom_proto_uc_tb.vhdl" "2b57efcbd064931e32d8a15cb843dacd39dbd57d" "20181017021311.575":
+  entity rom_proto_uc_tb at 1( 0) + 0 on 199;
+  architecture a_rom_proto_uc_tb of rom_proto_uc_tb at 8( 109) + 0 on 200;
+file . "fsm_tb.vhdl" "ec1d11feb23d26913b3ad0316bd6c6324e68cf65" "20181017013131.206":
+  entity fsm_tb at 1( 0) + 0 on 167;
+  architecture a_fsm_tb of fsm_tb at 8( 100) + 0 on 168;
+file . "pc_tb.vhdl" "f15bad8c36137b73e7442cd8e49b1373c837df2c" "20181017010719.427":
+  entity pc_tb at 1( 0) + 0 on 159;
+  architecture a_pc_tb of pc_tb at 8( 99) + 0 on 160;
+file . "proto_uc_tb.vhdl" "138a374a46836f7f27fadb2fffa532b1aca44b37" "20181017011029.292":
+  entity proto_uc_tb at 1( 0) + 0 on 163;
+  architecture a_proto_uc_tb of proto_uc_tb at 8( 105) + 0 on 164;
+file . "proto_uc.vhdl" "9899b671aed5acdcbd32db7a8bef1fe182d5f6ed" "20181017020309.903":
+  entity proto_uc at 1( 0) + 0 on 173;
+  architecture a_proto_uc of proto_uc at 14( 224) + 0 on 174;
+file . "mux2x1.vhdl" "0de37f0fd0a293714f83c6d1fdf141e4fbffc3b4" "20181002045432.623":
+  entity mux2x1 at 1( 0) + 0 on 105;
+  architecture a_mux2x1 of mux2x1 at 14( 273) + 0 on 106;
+file . "banco_reg_ula.vhdl" "826688beb479a12da5ec0e17470d527401c2e41b" "20181002050244.781":
+  entity banco_reg_ula at 1( 0) + 0 on 119;
+  architecture a_banco_reg_ula of banco_reg_ula at 22( 715) + 0 on 120;
+file . "banco_reg_ula_tb.vhdl" "8fb8984a8dfdeafe7149c3f4f8320c6ebae9423a" "20181002050246.499":
+  entity banco_reg_ula_tb at 1( 0) + 0 on 121;
+  architecture a_banco_reg_ula_tb of banco_reg_ula_tb at 8( 111) + 0 on 122;
+file . "reg16bits.vhdl" "cb39e213d8d231124c5c333dafb17ecff03eb96e" "20181018202314.877":
+  entity reg16bits at 1( 0) + 0 on 341;
+  architecture a_reg16bits of reg16bits at 16( 275) + 0 on 342;
+file . "banco_reg_tb.vhdl" "b91cc8a0e1fa438ab0cd8e4e38337894dd5357dc" "20181019024043.451":
+  entity banco_reg_tb at 1( 0) + 0 on 363;
+  architecture a_banco_reg_tb of banco_reg_tb at 8( 107) + 0 on 364;
+file . "ula_tb.vhdl" "85030889a300798ee2be11871372e39575556dd1" "20181019024723.413":
+  entity ula_tb at 1( 0) + 0 on 373;
+  architecture a_ula_tb of ula_tb at 9( 152) + 0 on 374;
+file . "ula.vhdl" "9b0d22322ab415dfcd7adab747c4c7b8f9c01c71" "20181108002557.419":
+  entity ula at 1( 0) + 0 on 751;
+  architecture a_ula of ula at 14( 303) + 0 on 752;
+file . "banco_reg.vhdl" "69a538bcd5a273ff7b7e508e41903599358a36b7" "20181019024043.445":
+  entity banco_reg at 1( 0) + 0 on 361;
+  architecture a_banco_reg of banco_reg at 18( 606) + 0 on 362;
+file . "reg16bits_tb.vhdl" "b352f5c574d7af4318ea6492385161adf6c3eddb" "20181018202336.452":
+  entity reg16bits_tb at 1( 0) + 0 on 347;
+  architecture a_reg16bits_tb of reg16bits_tb at 9( 115) + 0 on 348;
+file . "pc.vhdl" "685825b4f1f6ded81c6cee2b7f79c02e515ee2bf" "20181018193806.112":
+  entity pc at 1( 0) + 0 on 275;
+  architecture a_pc of pc at 14( 260) + 0 on 276;
+file . "fsm.vhdl" "e49e4fc28b7582e241b48ae9c20e74178d8c9039" "20181017013131.197":
+  entity fsm at 1( 0) + 0 on 165;
+  architecture a_fsm of fsm at 15( 292) + 0 on 166;
+file . "rom_proto_uc.vhdl" "7a7a41abe9fb38edab04d1b77bc8f8ff0b88b4ea" "20181017021311.567":
+  entity rom_proto_uc at 1( 0) + 0 on 197;
+  architecture a_rom_proto_uc of rom_proto_uc at 14( 225) + 0 on 198;
+file . "rom.vhdl" "a34d4f2ff20714c399f44a21be81e561c01856a1" "20181203001236.522":
+  entity rom at 1( 0) + 0 on 787;
+  architecture a_rom of rom at 13( 208) + 0 on 788;
+file . "unidade_de_controle.vhdl" "82774f337647a185cd32af41e29281a9af155a35" "20181203010853.236":
+  entity unidade_de_controle at 1( 0) + 0 on 789;
+  architecture a_unidade_de_controle of unidade_de_controle at 28( 808) + 0 on 790;
+file . "unidade_de_controle_tb.vhdl" "f14faeed65c33a9ecd33151a56e61baa877f9f8b" "20181018140132.091":
+  entity unidade_de_controle_tb at 1( 0) + 0 on 267;
+  architecture a_unidade_de_controle_tb of unidade_de_controle_tb at 8( 116) + 0 on 268;
+file . "toplevel_proto_uc_rom_fsm_tb.vhdl" "1e8b739b031cb0da90a7bf832363c85d06126aad" "20181017042250.346":
+  entity toplevel_proto_uc_rom_fsm_tb at 1( 0) + 0 on 233;
+  architecture a_toplevel_proto_uc_rom_fsm_tb of toplevel_proto_uc_rom_fsm_tb at 8( 122) + 0 on 234;
+file . "toplevel_com_jump.vhdl" "7e2eae29ba54112f0fcb0c225563bb397d73d305" "20181017051328.010":
+  entity toplevel_com_jump at 1( 0) + 0 on 261;
+  architecture a_toplevel_com_jump of toplevel_com_jump at 13( 206) + 0 on 262;
+file . "barramento.vhdl" "30169e24216c8ed0cfb61e3738c31456682624d6" "20181202235629.323":
+  entity barramento at 1( 0) + 0 on 781;
+  architecture a_barramento of barramento at 18( 426) + 0 on 782;
+file . "toplevel_tb.vhdl" "594bd0f04f257e807bc241d74bcc9a1745878f09" "20181202235231.109":
+  entity toplevel_tb at 1( 0) + 0 on 779;
+  architecture a_toplevel_tb of toplevel_tb at 8( 105) + 0 on 780;
+file . "reg_flags.vhdl" "4d3e77a828881832697af8ea8ff2787f2eec3c97" "20181107154500.813":
+  entity reg_flags at 1( 0) + 0 on 653;
+  architecture a_reg_flags of reg_flags at 16( 281) + 0 on 654;
+file . "ram.vhdl" "584cc02893bb77a22891b941a77dd2a745a5d337" "20181203012152.313":
+  entity ram at 1( 0) + 0 on 793;
+  architecture a_ram of ram at 15( 424) + 0 on 794;
